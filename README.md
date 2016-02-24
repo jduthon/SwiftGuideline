@@ -347,7 +347,7 @@ The example above demonstrates the following style guidelines:
 
 ## Functions Rules
 
-* ### Function Declarations
+### Function Declarations
 
 Keep short function declarations on one line including the opening brace:
 
