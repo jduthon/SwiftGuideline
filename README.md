@@ -1,8 +1,8 @@
 # Poisson's Swift Style Guide
 
-My Swift guideline is extramely inspired to [Hyperoslo's Guideline](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/Swift.md) and [Raywenderlich's Guideline](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown)  thanks to them !
+My Swift guideline is extremely inspired to [Hyperoslo's Guideline](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/Swift.md) and [Raywenderlich's Guideline](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown)  thanks to them !
 
-I make a little adjustment for me and this repository permit me to shared it.
+I have make a little adjustment for me and this repository permit me to share it.
 
 ## Table of Contents
 
@@ -56,9 +56,9 @@ class app_widgetContainer {
 
 * ### Variables
 
-For classes or structure variable start with a lower case letter,
-For scope variable, prefix it by 'l' 
-For parameters variable prefix it by 'p'
+For classes or structure variable start with a lower case letter.
+For scope variable, prefix it by 'l'.
+For parameters variable prefix it by 'p'.
 
 **Preferred:**
 
@@ -368,7 +368,7 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double,
 
 ### Functions organisation
 
-Always declare all your local variable at the begining of your function and make a carriage return between local variable and rest of your codes : 
+Always declare all your local variable at the beginning of your function and make a carriage return between local variable and the rest of your code: 
 
 **Preferred:**
 
@@ -396,7 +396,7 @@ func makeSomething() {
 
 ### Function Return 
 
-Always use only one return in your functions. This rules keep the functions clean and fast readeable 
+Always use only one return in your functions. This rule keep the functions clean, fast readable and easy to debug ! (trust me ^^)
 
 **Preferred:**
 
