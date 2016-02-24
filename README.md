@@ -1,8 +1,9 @@
 # Poisson's Swift Style Guide
 
-My Swift guideline is extremely inspired to [Hyperoslo's Guideline](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/Swift.md) and [Raywenderlich's Guideline](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown)  thanks to them !
+My Swift guideline is extremely inspired by [Hyperoslo's Guideline](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/Swift.md) and [Raywenderlich's Guideline](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown)  
+Thanks !
 
-I have make a little adjustment for me and this repository permit me to share it.
+I have made little personal adjustments and this repository allows me to share them.
 
 ## Table of Contents
 
@@ -24,13 +25,14 @@ I have make a little adjustment for me and this repository permit me to share it
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
 * [Semicolons](#semicolons)
-* [Resource code](#resource-code)
+* [Ressource code](#ressource-code)
 * [Attribution](#attribution)
 
 
 ## Naming
 
-Use descriptive names with camel case for classes, methods, variables, etc. Class names and constants in module scope should be capitalized, while method names and variables should start with a lower case letter.
+Use descriptive names with camel case for classes, methods, variables, etc. 
+Class names and constants in module scope should be capitalized, while method names and variables should begin with a lower case letter.
 
 **Preferred:**
 
@@ -43,7 +45,7 @@ class WidgetContainer {
 }
 ```
 
-**Not Preferred:**
+**Disfavored :**
 
 ```swift
 let MAX_WIDGET_COUNT = 100
@@ -56,9 +58,9 @@ class app_widgetContainer {
 
 * ### Variables
 
-For classes or structure variable start with a lower case letter.
-For scope variable, prefix it by 'l'.
-For parameters variable prefix it by 'p'.
+Classes or structure variables should start with a lower case letter.
+Scope variables should be prefixed by 'l'.
+Parameters variables prefixed by 'p'.
 
 **Preferred:**
 
@@ -78,7 +80,7 @@ class HomeViewController {
 }
 ```
 
-**Not Preferred:**
+**Disvafored:**
 
 ```swift
 class HomeViewController {
@@ -97,7 +99,8 @@ class HomeViewController {
 
 * ### Functions
 
-For functions and init methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
+For functions and init methods, prefer named parameters for all arguments unless the context is very clear. 
+Include external parameters names if it makes function calls more readable.
 
 ```swift
 func dateFromString(dateString: String) -> NSDate { ... }
@@ -118,22 +121,23 @@ class Guideline {
 }
 ```
 
-When referring to functions in prose include the required parameter names from the caller's perspective. If the context is clear and the exact signature is not important, you can use just the method name.
+When referring to functions in prose include the required parameter name from the caller's perspective. 
+If the context is clear and the exact signature is not important, you can use the method name alone.
 
 > Call `convertPointAt(column:row:)` from your own `init` implementation.
 >
 > If you implement `timedAction`, remember to provide an appropriate delay value.
 >
-> You shouldn't call the data source method `tableView(_:cellForRowAtIndexPath:)` directly.
+> You should not call the data source method `tableView(_:cellForRowAtIndexPath:)` directly.
 
-When in doubt, look at how Xcode lists the method in the jump bar – our style here matches that.
+When in doubt, have a look at how Xcode lists methods in the jump bar – our style here matches their.
 
 ![Methods in Xcode jump bar](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/xcode-jump-bar.png)
 
 
 ### Class Prefixes
 
-Swift types are all automatically namespaced by the module that contains them. As a result, prefixes are not required in order to minimize naming collisions. If two names from different modules collide you can disambiguate by prefixing the type name with the module name:
+Swift types are all automatically namespaced by the module which contains them. As a result, prefixes are not required in order to minimize naming collisions. If two names from different modules collide you can disambiguate by prefixing the type name with the module name:
 
 ```swift
 import MyModule
@@ -154,12 +158,12 @@ If you need to expose a Swift type for use within Objective-C you can provide a 
 
 ## Spacing and Indentation
 
-* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured on the project.
+* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. This should be configured in the project settings.
 
   ![Xcode indent settings](https://raw.githubusercontent.com/hyperoslo/iOS-playbook/master/assets/xcode-text-settings-swift.png)
 
-* Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
-* Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.
+* Method braces and other braces (`if`/`else`/`switch`/`while` etc.) should always be opened at the statement's line but closed after line break.
+* Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code have 4-space tabs hard coded, so this is a good way to fix it.
 
 **Preferred:**
 ```swift
@@ -170,7 +174,7 @@ if user.isHappy {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 if user.isHappy
 {
@@ -181,7 +185,7 @@ else {
 }
 ```
 
-* There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
+* There should be exactly one blank line between methods to aid with visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
 
 
 ## Classes and Structs
@@ -190,11 +194,11 @@ Unless you require functionality that can only be provided by a class, implement
 
 Additional capabilities of classes:
 
-- Inheritance: Enables one class to inherit the characteristics of another
-- Type casting: Enables you to check and interpret the type of a class instance at runtime
+- Inheritance: Enable one class to inherit the characteristics of another
+- Type casting: Enable you to check and interpret the type of a class instance at runtime
 - Deinitializers: Enable an instance of a class to free up any resources it has assigned
-- Reference counting: Allows more than one reference to a class instance
-- Compatibility: Classes are available from Objetive-C
+- Reference counting: Allow more than one reference to a class instance
+- Compatibility: Classes are available from Objective-C
 
 ### Use of Self
 
@@ -210,7 +214,7 @@ if let lTextContainer = textContainer {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 
 ```swift
 if let lTextContainer = self.textContainer {
@@ -266,7 +270,7 @@ extension MyViewcontroller: UIScrollViewDelegate {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 class MyViewcontroller: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
   // all methods
@@ -285,7 +289,7 @@ var diameter: Double {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 var diameter: Double {
   get {
@@ -296,7 +300,7 @@ var diameter: Double {
 
 ### Example definition
 
-Here's an example of a well-styled class definition:
+Here is an example of a well-styled class definition:
 
 ```swift
 class Circle: Shape {
@@ -345,7 +349,7 @@ The example above demonstrates the following style guidelines:
  + Don't add modifiers such as `internal` when they're already the default. Similarly, don't repeat the access modifier when overriding a method
 
 
-## Functions Rules
+## Function Rules
 
 ### Function Declarations
 
@@ -357,7 +361,7 @@ func reticulateSplines(spline: [Double]) -> Bool {
 }
 ```
 
-For functions with long signatures, add line breaks at appropriate points and add an extra indent on subsequent lines:
+For functions with long signature, add line breaks at appropriate points and add an extra indent on subsequent lines:
 
 ```swift
 func reticulateSplines(spline: [Double], adjustmentFactor: Double,
@@ -366,9 +370,9 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double,
 }
 ```
 
-### Functions organisation
+### Function organisation
 
-Always declare all your local variable at the beginning of your function and make a carriage return between local variable and the rest of your code: 
+Always declare all your local variables at the beginning of your function and make a carriage return between local variables and the rest of your code: 
 
 **Preferred:**
 
@@ -383,7 +387,7 @@ func makeSomething() {
 ```
 
 
-**Not Preferred:**
+**Disfavored:**
 
 ```swift
 func makeSomething() {
@@ -396,7 +400,7 @@ func makeSomething() {
 
 ### Function Return 
 
-Always use only one return in your functions. This rule keep the functions clean, fast readable and easy to debug ! (trust me ^^)
+Always use only one return in your functions. This rule keeps functions clean, fast readable and easy to debug ! (trust me ^^)
 
 **Preferred:**
 
@@ -412,7 +416,7 @@ func indexOfViewController(viewController:  UIViewController) -> Int {
 ```
 
 
-**Not Preferred:**
+**Disfavored:**
 
 ```swift
 func indexOfViewController(viewController:  UIViewController) -> Int {
@@ -454,7 +458,7 @@ let width = 120.0                                    // Double
 let widthString = (width as NSNumber).stringValue    // String
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 let width: NSNumber = 120.0                                 // NSNumber
 let widthString: NSString = width.stringValue               // NSString
@@ -491,7 +495,7 @@ if let lTextContainer = textContainer {
 ```
 
 Use `guard` unwrapping if the object is required for continuing the operation.
-`guard` is prefered when doing early returns inside of a function.
+`guard` is prefered when doing early return inside a function.
 
 ```
 guard let lRequiredObject = object else { return }
@@ -511,7 +515,7 @@ if let lSubview = subview {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 var optionalSubview: UIView?
 
@@ -531,7 +535,7 @@ let bounds = CGRect(x: 40.0, y: 20.0, width: 120.0, height: 80.0)
 var centerPoint = CGPoint(x: 96.0, y: 42.0)
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 let bounds = CGRectMake(40.0, 20.0, 120.0, 80.0)
 var centerPoint = CGPointMake(96.0, 42.0)
@@ -542,9 +546,9 @@ Prefer the struct-scope constants `CGRect.infiniteRect`, `CGRect.nullRect`, etc.
 
 ### Type Inference
 
-The Swift compiler is able to infer the type of variables and constants. You can provide an explicit type via a type alias (which is indicated by the type after the colon), but in the majority of cases this is not necessary.
+The Swift compiler is able to infer the type of variables and constants. You can provide an explicit type via a type alias (which is indicated by the type after the colon), but in general this is not necessary.
 
-Prefer compact code and let the compiler infer the type for a constant or variable.
+Prefer compact code and let the compiler infer the type of constant or variable.
 
 **Preferred:**
 ```swift
@@ -552,18 +556,18 @@ let message = "Click the button"
 var currentBounds = computeViewBounds()
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 let message: String = "Click the button"
 var currentBounds: CGRect = computeViewBounds()
 ```
 
-**NOTE**: Following this guideline means picking descriptive names is even more important than before.
+**NOTE**: Following this guideline means choosing descriptive names is even more important than before.
 
 
 ### Syntactic Sugar
 
-Prefer the shortcut versions of type declarations over the full generics syntax.
+Prefer the shortcut version of type declarations over the full generics syntax.
 
 **Preferred:**
 ```swift
@@ -572,7 +576,7 @@ var employees: [Int: String]
 var faxNumber: Int?
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 var deviceModels: Array<String>
 var employees: Dictionary<Int, String>
@@ -602,7 +606,7 @@ Anonymous parameters
 [subview, anotherSubview].forEach { view.addSubview($0) }
 ```
 
-There are some disadvantages to using `forEach` over `for-in` which you should probably be
+There are some disadvantages of using `forEach` over `for-in` which you should probably be
 aware of.
 
 ```swift
@@ -632,7 +636,7 @@ for (lIndex, lPerson) in enumerate(attendeeList) {
 }
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 for var i = 0; i < 3; i++ {
   println("Hello three times")
@@ -658,15 +662,15 @@ The only exception to this rule is the `for-conditional-increment` construct, wh
 var swift = "not a scripting language"
 ```
 
-**Not Preferred:**
+**Disfavored:**
 ```swift
 var swift = "not a scripting language";
 ```
 
-**NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
+**NOTE**: Swift is very different compared to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
 
 
-## Resource code
+## Ressource code
 
 In `Swift` it's a good practice to use `struct` for accessing elements of asset catalogs, storyboards, custom colors and fonts. It helps to avoid the error-prone practice of hardcoding strings into your code.
 
@@ -679,4 +683,4 @@ struct ColorList {
 ## TODO 
 
 * Talk about Nil Coalescing Operator
-* Check example 
+* Check example
