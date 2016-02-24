@@ -675,8 +675,3 @@ struct ColorList {
   static let someColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.8)
 }
 ```
-
-
-## Attribution
-
-This document is based on the [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown).
