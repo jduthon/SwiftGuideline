@@ -131,7 +131,7 @@ When in doubt, look at how Xcode lists the method in the jump bar – our style 
 ![Methods in Xcode jump bar](https://raw.githubusercontent.com/raywenderlich/swift-style-guide/master/screens/xcode-jump-bar.png)
 
 
-* ### Class Prefixes
+### Class Prefixes
 
 Swift types are all automatically namespaced by the module that contains them. As a result, prefixes are not required in order to minimize naming collisions. If two names from different modules collide you can disambiguate by prefixing the type name with the module name:
 
@@ -366,7 +366,7 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double,
 }
 ```
 
-* ### Functions organisation
+### Functions organisation
 
 Always declare all your local variable at the begining of your function and make a chariot return between local variable and rest of your codes : 
 
@@ -394,7 +394,7 @@ func makeSomething() {
 }
 ```
 
-* ### Function Return 
+### Function Return 
 
 Always use only one return in your functions. This rules keep the functions clean and fast readeable 
 
