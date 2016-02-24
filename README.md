@@ -368,7 +368,7 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double,
 
 ### Functions organisation
 
-Always declare all your local variable at the begining of your function and make a chariot return between local variable and rest of your codes : 
+Always declare all your local variable at the begining of your function and make a carriage return between local variable and rest of your codes : 
 
 **Preferred:**
 
