@@ -675,3 +675,8 @@ struct ColorList {
   static let someColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.8)
 }
 ```
+
+## TODO 
+
+* Talk about Nil Coalescing Operator
+* Check example 
